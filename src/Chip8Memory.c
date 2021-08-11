@@ -1,7 +1,6 @@
 /*       Memory Functionality       */
 
 #include "Chip8Memory.h"
-#include<assert.h>
 
 static void memory_in_bounds(int index) { assert(index >= 0 && index < CHIP8_MEMORY_SIZE ); }
 

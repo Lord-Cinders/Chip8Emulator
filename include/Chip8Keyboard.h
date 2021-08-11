@@ -14,7 +14,6 @@
 #ifndef CHIP8KEYBOARD_H_
 #define CHIP8KEYBOARD_H_
 
-#include <stdbool.h>
 #include "config.h"
 
 struct Chip8Keyboard

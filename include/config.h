@@ -1,6 +1,8 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
+
+
 // Note to future self - I hope you're not this stupid
 // Note 2 - maybe later
 // #ifdef _WIN32
@@ -10,6 +12,11 @@
 //     #define Sleep(time) ( usleep(time / 100) ) // might not work, need a lab rat
 // #endif
 // 
+
+#include<stddef.h>
+#include<stdbool.h>
+#include<memory.h>
+#include<assert.h>
 
 /* Screen Enums*/
 #define SCREEN_TITLE "CHIP 8 Emulator"

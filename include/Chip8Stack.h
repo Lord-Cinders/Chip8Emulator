@@ -1,5 +1,6 @@
 #ifndef CHIP8STACK_H_
 #define CHIP8STACK_H_
+
 #include "config.h"
 
 struct Chip8;

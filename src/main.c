@@ -4,7 +4,6 @@
 */
 
 #include <stdio.h>
-#include <stdbool.h>
 #include <Windows.h>
 #include "SDL2/SDL.h"
 #include "Chip8.h"
@@ -158,7 +157,7 @@ int main(int argsc, char **argv)
 
         unsigned short opcode = chip8_memory_get_short(&chip8.memory, chip8.registers.PC);
         chip8_exec(&chip8, opcode);
-        chip8.registers.PC += 2; // inst is 2 bytes.
+        // chip8.registers.PC += 2; // inst is 2 bytes.
     }
     
 }

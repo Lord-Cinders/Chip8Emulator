@@ -1,7 +1,6 @@
 #ifndef CHIP8_H_
 #define CHIP8_H_
 
-#include<stddef.h>
 #include "config.h"
 #include "Chip8Memory.h"
 #include "Chip8Registers.h"

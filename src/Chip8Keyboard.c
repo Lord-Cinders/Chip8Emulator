@@ -1,5 +1,4 @@
 #include "Chip8Keyboard.h"
-#include<assert.h>
 
 static void key_in_bounds(int key) { assert(key >= 0 && key < CHIP8_KEYBOARD_SIZE); }
 

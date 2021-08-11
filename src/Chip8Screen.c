@@ -1,6 +1,4 @@
-#include<stdbool.h>
-#include<assert.h>
-#include<memory.h>
+
 #include "Chip8Screen.h"
 
 

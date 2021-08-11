@@ -1,6 +1,5 @@
 #include "Chip8Stack.h"
 #include "Chip8.h"
-#include<assert.h>
 
 static void stack_in_bounds(struct Chip8 * chip8) { assert(chip8->registers.stack_pointer < CHIP8_MAX_STACK_SIZE); }
 
