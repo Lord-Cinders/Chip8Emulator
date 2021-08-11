@@ -1,0 +1,52 @@
+#include<memory.h>
+#include<assert.h>
+#include "Chip8.h"
+
+
+const char default_character_set[] = {
+    0xf0, 0x90, 0x90, 0x90, 0xf0,
+    0x20, 0x60, 0x20, 0x20, 0x70,
+    0xf0, 0x10, 0xf0, 0x80, 0xf0,
+    0xf0, 0x10, 0xf0, 0x10, 0xf0,
+    0x90, 0x90, 0xf0, 0x10, 0x10,
+    0xf0, 0x80, 0xf0, 0x10, 0xf0,
+    0xf0, 0x80, 0xf0, 0x90, 0xf0,
+    0xf0, 0x10, 0x20, 0x40, 0x40,
+    0xf0, 0x90, 0xf0, 0x90, 0xf0,
+    0xf0, 0x90, 0xf0, 0x10, 0xf0,
+    0xf0, 0x90, 0xf0, 0x90, 0x90,
+    0xe0, 0x90, 0xe0, 0x90, 0xe0,
+    0xf0, 0x80, 0x80, 0x80, 0xf0,
+    0xe0, 0x90, 0x90, 0x90, 0xe0,
+    0xf0, 0x80, 0xf0, 0x80, 0xf0, 
+    0xf0, 0x80, 0xf0, 0x80, 0x80
+};
+
+void CHIP8_Init(struct Chip8 * chip8) // initialize all memory units to 0
+{
+    memset(chip8, 0, sizeof(struct Chip8));
+    memcpy(&chip8->memory.memory_array, default_character_set, sizeof(default_character_set));
+}
+
+void chip8_load(struct Chip8 * chip8, const char * program_buffer, size_t size) // load program into chip memory
+{
+    assert(size + CHIP8_PROGRAM_START < CHIP8_MEMORY_SIZE);
+    memcpy(&chip8->memory.memory_array[CHIP8_PROGRAM_START], program_buffer, size);
+    chip8->registers.PC = CHIP8_PROGRAM_START;
+}
+
+// TODO: finish the instruction set emulator
+void chip8_exec(struct Chip8 * chip8, unsigned short opcode)
+{
+    switch (opcode)
+    {
+    case 0x00E0: // clears the screen
+        screen_clear(&chip8->screen);
+        break;
+    case 0x00EE: //The interpreter sets the program counter to the address at the top of the stack, then subtracts 1 from the stack pointer.
+        chip8->registers.PC = stack_pop(chip8);
+
+    default:
+        break;
+    }
+}
