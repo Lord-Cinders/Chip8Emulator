@@ -1,6 +1,7 @@
 /*
  Chip8 Emulator
  Started on 3/8/21
+ First Stable Build - 12/8/21
 */
 
 #include <stdio.h>
