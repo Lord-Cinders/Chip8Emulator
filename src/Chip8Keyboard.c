@@ -2,11 +2,16 @@
 
 static void key_in_bounds(int key) { assert(key >= 0 && key < CHIP8_KEYBOARD_SIZE); }
 
-int map_keyboard(const char* map, char key) // converts physical keypress to virtual keypress
+void keyboard_load_map(struct Chip8Keyboard* keyboard, const char* map)
+{
+    keyboard->keymap = map;
+}
+
+int map_keyboard(struct Chip8Keyboard* keyboard, char key) // converts physical keypress to virtual keypress
 {
     for(int i = 0; i < CHIP8_KEYBOARD_SIZE; i++)
     {
-        if(map[i] == key) { return i; }
+        if(keyboard->keymap[i] == key) { return i; }
     }
 
     return -1;

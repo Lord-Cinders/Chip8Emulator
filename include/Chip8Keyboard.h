@@ -19,9 +19,11 @@
 struct Chip8Keyboard
 {
     bool keyboard[CHIP8_KEYBOARD_SIZE];
+    const char * keymap;
 };
 
-int map_keyboard(const char* map, char key);
+void keyboard_load_map(struct Chip8Keyboard* keyboard, const char* map);
+int map_keyboard(struct Chip8Keyboard* keyboard, char key);
 void keyboard_key_down(struct Chip8Keyboard* keyboard, int key);
 void keyboard_key_up(struct Chip8Keyboard* keyboard, int key);
 bool keyboard_is_key_down(struct Chip8Keyboard* keyboard, int key);

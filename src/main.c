@@ -51,10 +51,12 @@ int main(int argsc, char **argv)
 
     struct Chip8 chip8;
     CHIP8_Init(&chip8);
+    keyboard_load_map(&chip8.keyboard, keyboard_map);
 
-    chip8_load(&chip8, "hello", sizeof("hello"));
+    chip8_load(&chip8, buff, size);
 
     // TODO: Shift everything into a differnt file
+    // Note to future self- REMOVE THE FU****G TEST FUNCTIONS NEXT TIME
 
     // Setting up SDL to Emulate a 640x320p display
     SDL_Init(SDL_INIT_EVERYTHING);
@@ -68,7 +70,7 @@ int main(int argsc, char **argv)
 
     // Needed to render/draw pixels on the window display
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_TEXTUREACCESS_TARGET);
-    int w = 0, l = 0;
+    // int w = 0;
     while (1)
     {
         SDL_Event event;
@@ -83,7 +85,7 @@ int main(int argsc, char **argv)
                 case SDL_KEYDOWN:
                 {   
                     char key = event.key.keysym.sym;
-                    int mapped_key = map_keyboard(keyboard_map, key);
+                    int mapped_key = map_keyboard(&chip8.keyboard, key);
                     if (mapped_key != -1) { keyboard_key_down(&chip8.keyboard, mapped_key); }
                 }
                 break;
@@ -91,7 +93,7 @@ int main(int argsc, char **argv)
                 case SDL_KEYUP:
                 {
                     char key = event.key.keysym.sym;
-                    int mapped_key = map_keyboard(keyboard_map, key);
+                    int mapped_key = map_keyboard(&chip8.keyboard, key);
                     if (mapped_key != -1) { keyboard_key_up(&chip8.keyboard, mapped_key); }
                 }
                 break;
@@ -107,7 +109,6 @@ int main(int argsc, char **argv)
         // {
         //     w == 0;
         // }
-
         // screen_set_sprite(&chip8.screen, 1 + w, 1, &chip8.memory.memory_array[0x1e], 5);
         // screen_set_sprite(&chip8.screen, 6 + w, 1, &chip8.memory.memory_array[0x2d], 5);
         // screen_set_sprite(&chip8.screen, 11 + w, 1, &chip8.memory.memory_array[0x14], 5);
@@ -137,12 +138,10 @@ int main(int argsc, char **argv)
         // screen_remove_sprite(&chip8.screen, 16 + w, 1, &chip8.memory.memory_array[0x0a], 5);
         // screen_remove_sprite(&chip8.screen, 21 + w, 1, &chip8.memory.memory_array[0x00], 5);
         // w++;
-        screen_clear(&chip8.screen);
-
 
         if (chip8.registers.delay_timer > 0)
         {
-            Sleep(100);
+            Sleep(1000);
             chip8.registers.delay_timer -= 1;
         }
 
@@ -156,8 +155,9 @@ int main(int argsc, char **argv)
         }
 
         unsigned short opcode = chip8_memory_get_short(&chip8.memory, chip8.registers.PC);
+        chip8.registers.PC += 2; // inst is 2 bytes.
         chip8_exec(&chip8, opcode);
-        // chip8.registers.PC += 2; // inst is 2 bytes.
+       
     }
     
 }
