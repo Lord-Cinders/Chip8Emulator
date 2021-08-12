@@ -10,7 +10,7 @@ Runs code intended for the chip8 on modern hardware.
 
 Yes, kindof.
 
-![Tetris](screenshots/Tetris.png "Tetris")
+![Tetris](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Pong.PNG)
 *Space Invaders*
 
 ![Pong](screenshots/Pong.png "Pong")
