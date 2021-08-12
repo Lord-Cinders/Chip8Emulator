@@ -142,13 +142,13 @@ int main(int argsc, char **argv)
 
         if (chip8.registers.delay_timer > 0)
         {
-            Sleep(1000);
+            Sleep(1);
             chip8.registers.delay_timer -= 1;
         }
 
         if (chip8.registers.sound_timer > 0)
         {
-            Beep(500, 100 * chip8.registers.sound_timer);
+            Beep(500, 10 * chip8.registers.sound_timer);
             chip8.registers.sound_timer = 0;
             // or
             // Beep(500, 100);
