@@ -10,6 +10,14 @@ Runs code intended for the chip8 on modern hardware.
 
 Yes, kindof.
 
+![Tetris](screenshots/Tetris.png "Tetris")
+*Space Invaders*
+
+![Pong](screenshots/Pong.png "Pong")
+*Pong*
+
+
+
 ## Compiling and Running
 
 Everything you need to build the project are in the repo (only works on windows for now).
