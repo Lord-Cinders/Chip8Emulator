@@ -10,10 +10,10 @@ Runs code intended for the chip8 on modern hardware.
 
 Yes, kindof.
 
-![Tetris](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Pong.PNG)
+![Tetris](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Pong.PNG)\
 *Tetris*
 
-![Pong](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Tetris.PNG)
+![Pong](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Tetris.PNG)\
 *Pong*
 
 
