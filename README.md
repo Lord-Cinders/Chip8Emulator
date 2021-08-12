@@ -11,13 +11,13 @@ Runs code intended for the chip8 on modern hardware.
 Yes, kindof.
 
 ![Invaders](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Invaders.PNG)\
-*Space Invaders*\
+*Space Invaders*
 
 ![Tetris](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Pong.PNG)\
- *Tetris*\
+ *Tetris*
 
 ![Pong](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Tetris.PNG)\
-                                         *Pong*\
+                                         *Pong*
 
 
 
