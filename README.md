@@ -13,7 +13,7 @@ Yes, kindof.
 ![Tetris](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Pong.PNG)
 *Space Invaders*
 
-![Pong](screenshots/Pong.png "Pong")
+![Pong](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Tetris.PNG)
 *Pong*
 
 
