@@ -285,6 +285,7 @@ static void chip8_exec_com(struct Chip8 * chip8, unsigned short opcode)
     }
 }
 
+ // Todo: add super chip8 instructions
 void chip8_exec(struct Chip8 * chip8, unsigned short opcode)
 {
     switch (opcode)
