@@ -56,7 +56,8 @@ int main(int argsc, char **argv)
 
     chip8_load(&chip8, buff, size);
 
-    // TODO: Shift everything into a differnt file
+    // TODO: clean main file
+
     // Note to future self- REMOVE THE FU****G TEST FUNCTIONS NEXT TIME
 
     // Setting up SDL to Emulate a 640x320p display
