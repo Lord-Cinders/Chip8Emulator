@@ -13,11 +13,12 @@ Yes, kindof.
 ![Invaders](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Invaders.PNG)\
 *Space Invaders*
 
-![Tetris](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Pong.PNG)\
- *Tetris*
+![Pong](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Pong.PNG)\
+*Pong*
 
-![Pong](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Tetris.PNG)\
-                                         *Pong*
+![Tetris](https://github.com/Cinder-Binder/Chip8Emulator/blob/master/screenshots/Tetris.PNG)\
+ *Tetris*
+                                         
 
 
 
