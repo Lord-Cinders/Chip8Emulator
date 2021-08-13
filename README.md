@@ -37,7 +37,7 @@ run:
 23 (public domain) ROMs are included in the `bin` directory.
 
 
-### Read more about chip8 - http://devernay.free.fr/hacks/chip8/C8TECH10.HTM#0.
+### Based on cowgod's chip8 technical reference - http://devernay.free.fr/hacks/chip8/C8TECH10.HTM#0.
 
 
 
