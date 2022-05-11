@@ -2,6 +2,7 @@
  Chip8 Emulator
  Started on 3/8/21
  First Stable Build - 12/8/21
+ "No, it cant run crisis" -Cinders21
 */
 
 #include <stdio.h>
